@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://connect-testing.secupay-ag.de/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=foo&client_secret=9c5f250b69f6436cb38fd780349bc00810d8d5051d3dcf821e428f65a32724bd&grant_type=client_credentials
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sat, 22 Jan 2022 23:37:44 GMT
+      Server:
+      - Apache/2.4.48 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - POST, OPTIONS
+      X-Frame-Options:
+      - allow-from *
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '600'
+      Access-Control-Allow-Headers:
+      - Content-Type, Accept, Authorization, Content-Security-Policy, X-Content-Type-Options,
+        X-Xss-Protection, X-Frame-Options
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Content-Security-Policy:
+      - script-src 'self' code.jquery.com
+      Content-Length:
+      - '83'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid_client","error_description":"The client credentials
+        are invalid"}'
+  recorded_at: Sat, 22 Jan 2022 23:37:44 GMT
+recorded_with: VCR 6.0.0

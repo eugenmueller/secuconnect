@@ -3,13 +3,16 @@ require 'faraday'
 require 'active_support'
 require_relative "secuconnect/configuration"
 require_relative "secuconnect/version"
+require_relative "secuconnect/base"
+require_relative "secuconnect/oauth2/client"
+require_relative "secuconnect/oauth2/token"
 
 module Secuconnect
   class Error < StandardError; end
   # Configuration of global settings for Secupay
-  #   Secumpay.configure do |config|
-  #     config.secupay_client_id = '123ab'
-  #   end
+  # Secuconnect.configure do |config|
+  #   config.secuconnect_client_id = '123ab'
+  # end
   class << self
     attr_accessor :config, :cache
 
