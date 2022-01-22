@@ -30,8 +30,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Gem dependencies
-  spec.add_dependency "activesupport"
-  spec.add_dependency "faraday"
+  spec.add_dependency "activesupport", "~> 6.1"
+  spec.add_dependency "faraday", "~> 2.1"
   spec.add_dependency "rake", "~> 13.0"
 
   spec.add_development_dependency "guard-rspec"
@@ -40,6 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rubocop"
   spec.add_development_dependency "rubocop-performance"
   spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "vcr", "~> 6.0"
   spec.add_development_dependency "webmock", "~> 3.4"
 end

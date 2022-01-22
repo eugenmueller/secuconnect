@@ -2,18 +2,19 @@ PATH
   remote: .
   specs:
     secuconnect (0.1.0)
-      activesupport
-      faraday
+      activesupport (~> 6.1)
+      faraday (~> 2.1)
       rake (~> 13.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.1)
+    activesupport (6.1.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
@@ -115,6 +116,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
+    zeitwerk (2.5.3)
 
 PLATFORMS
   x86_64-darwin-20
@@ -122,13 +124,12 @@ PLATFORMS
 DEPENDENCIES
   guard-rspec
   pry
-  rake (~> 13.0)
-  rspec (~> 3.0)
-  rubocop (~> 1.7)
+  rspec (~> 3.7)
+  rubocop
   rubocop-performance
   secuconnect!
   simplecov
-  vcr
+  vcr (~> 6.0)
   webmock (~> 3.4)
 
 BUNDLED WITH
