@@ -12,5 +12,5 @@ jobs:
       with:
         ruby-version: 2.7.3
         bundler-cache: true
-    - name: Run the default task
-      run: bundle exec rake
+    - name: Run specs
+      run: bundle exec rspec
