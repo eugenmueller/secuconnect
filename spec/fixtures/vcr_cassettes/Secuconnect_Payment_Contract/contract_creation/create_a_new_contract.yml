@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://connect-testing.secupay-ag.de/api/v2/Payment/Contracts/GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX/RequestID
+    body:
+      encoding: UTF-8
+      string: '{"contact":{"salutation":"Mr","forename":"John","surname":"Doe","dob":"1980-02-03","email":"john.doe@example.com","mobile":"","address":{"street":"Test
+        Street","street_number":"6","postal_code":"01234","city":"Examplecity","country":"Germany"}},"project":"project_name
+        1642970813 Test 47bf6e21-494f-4da5-a919-14c1e4dd46f2","payout_account":{"iban":"DE89370400440532013000","bic":"","owner":"Test
+        1"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer c92ekgjtmoh7ut6oerrt38e7s3
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Jan 2022 20:46:53 GMT
+      Server:
+      - Apache/2.4.48 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Expose-Headers:
+      - ''
+      Content-Language:
+      - en_GB
+      X-Frame-Options:
+      - allow-from *
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '600'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, PATCH, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Accept, Authorization, Content-Security-Policy, X-Content-Type-Options,
+        X-Xss-Protection, X-Frame-Options
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Content-Security-Policy:
+      - script-src 'self' code.jquery.com
+      Content-Length:
+      - '446'
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"object":"general.contracts","id":"GCR_WRG7H77A3NG6HZ8NJ0U5NAZ900W2O3","id_old":2000443,"parent":{"object":"general.contracts","id":"GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX"},"merchant":{"object":"general.merchants","id":"MRC_K4XA5F344PAN05HF58JT3Y48002CN5"},"approved":false,"created":"2022-01-23T21:46:53+01:00","apikey":"7770468b8813e754d0985ff3475dc1514315e0d9","contract":{"object":"general.contracts","id":"GCR_WRG7H77A3NG6HZ8NJ0U5NAZ900W2O3"}}'
+  recorded_at: Sun, 23 Jan 2022 20:46:53 GMT
+recorded_with: VCR 6.0.0

@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://connect-testing.secupay-ag.de/oauth/token
+    method: get
+    uri: https://connect-testing.secupay-ag.de/api/v2/Payment/Contracts/GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX
     body:
-      encoding: UTF-8
-      string: client_id=09ae83af7c37121b2de929b211bad944&client_secret=9c5f250b69f6436cb38fd780349bc00810d8d5051d3dcf821e428f65a32724bd&grant_type=client_credentials
+      encoding: US-ASCII
+      string: ''
     headers:
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
+      Authorization:
+      - Bearer c92ekgjtmoh7ut6oerrt38e7s3
       User-Agent:
       - Faraday v2.1.0
       Accept-Encoding:
@@ -21,25 +23,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 23 Jan 2022 20:44:15 GMT
+      - Sun, 23 Jan 2022 20:44:16 GMT
       Server:
       - Apache/2.4.48 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
-      - no-store
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
       Pragma:
       - no-cache
       Access-Control-Expose-Headers:
       - ''
-      Access-Control-Allow-Methods:
-      - POST, OPTIONS
+      Content-Language:
+      - en_GB
       X-Frame-Options:
       - allow-from *
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Max-Age:
       - '600'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, PATCH, OPTIONS
       Access-Control-Allow-Headers:
       - Content-Type, Accept, Authorization, Content-Security-Policy, X-Content-Type-Options,
         X-Xss-Protection, X-Frame-Options
@@ -52,11 +56,11 @@ http_interactions:
       Content-Security-Policy:
       - script-src 'self' code.jquery.com
       Content-Length:
-      - '132'
+      - '227'
       Content-Type:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"access_token":"m8co8mnannubda15pj491rk2p2","expires_in":1200,"token_type":"bearer","scope":"https:\/\/scope.secucard.com\/e\/api"}'
-  recorded_at: Sun, 23 Jan 2022 20:44:15 GMT
+      string: '{"object":"general.contracts","id":"GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX","id_old":1142838,"approved":true,"created":"2022-01-23T21:44:16+01:00","merchant":{"object":"general.merchants","id":"MRC_WVHJQFQ4JNVYNG5B55TYK748ZCHQP8"}}'
+  recorded_at: Sun, 23 Jan 2022 20:44:16 GMT
 recorded_with: VCR 6.0.0
