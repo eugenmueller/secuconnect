@@ -4,7 +4,7 @@ module Secuconnect
   module Payment
     class Contract < Client
       def index
-        connection.get(base_path)
+        response = connection.get(base_path)
         JSON.parse(response.body)
       end
 
