@@ -1,20 +1,20 @@
-name: Ruby
+name: Secuconnect CI
 
 on: [push,pull_request]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.3
+        ruby-version: '2.7.3'
         bundler-cache: true
-    - name: Run bundle install
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-    - name: Build and test with rspec
-      run: bundle exec rspec
+    - name: Run the default task
+      run: bundle exec rake
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
