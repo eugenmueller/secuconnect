@@ -1,10 +1,11 @@
 # frozen_string_literal: true
+
 require "pry"
 require "webmock"
 require "secuconnect"
-require 'active_support/testing/time_helpers'
+require "active_support/testing/time_helpers"
 
-Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each {|file| require file }
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].sort.each { |file| require file }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

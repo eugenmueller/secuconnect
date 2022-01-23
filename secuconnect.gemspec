@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Secuconnect api rails sdk"
   spec.homepage      = "https://github.com/"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 2.7.3"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
@@ -42,4 +42,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "vcr", "~> 6.0"
   spec.add_development_dependency "webmock", "~> 3.4"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end

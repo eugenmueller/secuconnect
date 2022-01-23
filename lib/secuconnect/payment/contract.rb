@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
 module Secuconnect
   module Payment
     class Contract < Client
-
       def index
-        response = connection.get(base_path)
+        connection.get(base_path)
         JSON.parse(response.body)
       end
 
       def show(account_id:)
         path = "#{base_path}/#{account_id}"
-        response = connection.get(path)
+        connection.get(path)
       end
 
       def create(account_id:, body:)
         path = "#{base_path}/#{account_id}/RequestID"
-        response = connection.post(path, body.to_json)
+        connection.post(path, body.to_json)
       end
 
       def validate(account_id:)
