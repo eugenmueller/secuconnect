@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer c92ekgjtmoh7ut6oerrt38e7s3
+      - Bearer t4oq2h470o2ktqg0elfdbjnhek
       User-Agent:
       - Faraday v2.1.0
       Accept-Encoding:
@@ -23,13 +23,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 23 Jan 2022 20:44:15 GMT
+      - Sun, 13 Feb 2022 20:58:01 GMT
       Server:
-      - Apache/2.4.48 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
+      - Apache/2.4.52 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      - no-store, no-cache, must-revalidate
       Pragma:
       - no-cache
       Access-Control-Expose-Headers:
@@ -61,6 +61,6 @@ http_interactions:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"object":"general.contracts","id":"GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX","id_old":1142838,"approved":true,"created":"2022-01-23T21:44:16+01:00","merchant":{"object":"general.merchants","id":"MRC_WVHJQFQ4JNVYNG5B55TYK748ZCHQP8"}}'
-  recorded_at: Sun, 23 Jan 2022 20:44:15 GMT
+      string: '{"object":"general.contracts","id":"GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX","id_old":1142838,"approved":true,"created":"2022-02-13T21:58:01+01:00","merchant":{"object":"general.merchants","id":"MRC_WVHJQFQ4JNVYNG5B55TYK748ZCHQP8"}}'
+  recorded_at: Sun, 13 Feb 2022 20:58:01 GMT
 recorded_with: VCR 6.0.0

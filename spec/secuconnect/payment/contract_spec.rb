@@ -17,8 +17,7 @@ RSpec.describe Secuconnect::Payment::Contract, vcr: true do
     subject(:response) { described_class.new.show(account_id: account_id) }
 
     it "return contract for id" do
-      expect(response).to be_success
-      expect(JSON.parse(response.body)).to have_key "object"
+      expect(response).to have_key "object"
     end
   end
 
@@ -63,7 +62,7 @@ RSpec.describe Secuconnect::Payment::Contract, vcr: true do
     subject(:response) { described_class.new.create(account_id: account_id, body: body) }
 
     it "create a new contract" do
-      expect(response).to be_success
+      expect(response).to have_key "object"
     end
   end
 end

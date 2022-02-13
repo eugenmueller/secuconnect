@@ -3,7 +3,7 @@
 RSpec.describe Secuconnect::Oauth2::Client, vcr: true do
   describe ".retrieve_token" do
     context "with valid credentials" do
-      subject(:response) { described_class.new.retrieve_token }
+      subject(:response) { described_class.retrieve_token }
 
       it "respond successfully with access_token" do
         expect(response.status).to be(200)
@@ -12,7 +12,7 @@ RSpec.describe Secuconnect::Oauth2::Client, vcr: true do
     end
 
     context "with invalid credentials" do
-      subject(:response) { described_class.new.retrieve_token }
+      subject(:response) { described_class.retrieve_token }
 
       it "respond with an error" do
         allow(Secuconnect.config).to receive(:secuconnect_client_id).and_return(nil)

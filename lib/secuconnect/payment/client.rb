@@ -2,6 +2,15 @@
 
 module Secuconnect
   module Payment
+    class ResponseError < StandardError
+      attr_accessor :response
+
+      def initialize(response)
+        @response = response
+        super(response)
+      end
+    end
+
     class Client
       include Secuconnect::Connection
       include Secuconnect::Authenticated
@@ -16,7 +25,7 @@ module Secuconnect
       end
 
       def access_token
-        Secuconnect::Oauth2::Token.new.find_or_create
+        Secuconnect::Oauth2::Token.find_or_create
       end
     end
   end

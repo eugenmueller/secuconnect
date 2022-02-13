@@ -21,9 +21,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 23 Jan 2022 20:44:14 GMT
+      - Sun, 13 Feb 2022 20:58:00 GMT
       Server:
-      - Apache/2.4.48 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
+      - Apache/2.4.52 (Debian) mpm-itk/2.4.7-04 OpenSSL/1.1.1k
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -57,6 +57,6 @@ http_interactions:
       - application/json; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"access_token":"1l9ebcsgl7t1eem2i9c81tduc2","expires_in":1200,"token_type":"bearer","scope":"https:\/\/scope.secucard.com\/e\/api"}'
-  recorded_at: Sun, 23 Jan 2022 20:44:14 GMT
+      string: '{"access_token":"4rr6179mvsrqfk2e124krgf19r","expires_in":1200,"token_type":"bearer","scope":"https:\/\/scope.secucard.com\/e\/api"}'
+  recorded_at: Sun, 13 Feb 2022 20:58:00 GMT
 recorded_with: VCR 6.0.0
