@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ### Configuration
 
-First of all yout should provide secuconnect credentials. To do it just create an initializer file and add a configuration block inside it.
+First of all yout should provide secuconnect credentials. Just create an initializer file and add a configuration block inside it.
 
 ```ruby
 Secuconnect.configure do |config|
