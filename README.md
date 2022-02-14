@@ -41,7 +41,7 @@ The contract endpoint provide function to create and validate a contract sub-pro
 You could create a contract sub-project in this way
 
 ```ruby
-contract = Secuconnect::Payment::Contract.new.create(account_id: account_id, body: body)
+contract = Secuconnect::Payment::Contract.create(account_id: account_id, body: body)
 
 # body could look like this
 body = {
@@ -74,7 +74,7 @@ for further information which arguments are provided. Please check it on https:/
 if you want to validate the contract use
 
 ```ruby
-validation_result = Secuconnect::Payment::Contract.new.validate(account_id: account_id)
+validation_result = Secuconnect::Payment::Contract.validate(account_id: account_id)
 ```
 
 ## Step 1
