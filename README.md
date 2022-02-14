@@ -36,9 +36,9 @@ end
 
 ### Contracts
 
-The contract endpoint provide function to create and validate a contract sub-project
+The contract endpoint provides methods to create and validate a contract sub-project
 
-You could create a contract sub-project in this way
+You could create a contract sub-project this way
 
 ```ruby
 contract = Secuconnect::Payment::Contract.create(account_id: account_id, body: body)
@@ -69,9 +69,8 @@ body = {
 }
 ```
 
-for further information which arguments are provided. Please check it on https://developer.secuconnect.com/
-
-if you want to validate the contract use
+For further information which arguments are provided. Please check it on https://developer.secuconnect.com/
+If you want to validate the contract use
 
 ```ruby
 validation_result = Secuconnect::Payment::Contract.validate(account_id: account_id)
