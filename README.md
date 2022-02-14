@@ -1,8 +1,6 @@
 # Secuconnect
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/secuconnect`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provide a client for the secuconnect api. Currently it support only the payout contracts endpoint. Pr's for other endpoints are welcome.
 
 ## Installation
 
@@ -22,7 +20,62 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+First of all yout should provide secuconnect credentials. To do it just create an initializer file and add a configuration block inside it.
+
+```ruby
+Secuconnect.configure do |config|
+  config.secuconnect_client_id = "your_client_id"
+  config.secuconnect_client_secret = "your_client_secret"
+  # optional
+  config.secuconnect_base_url = "secucconect base url"
+  config.secuconnect_token_expiration_seconds = "token expiration time"
+end
+```
+
+### Contracts
+
+The contract endpoint provide function to create and validate a contract sub-project
+
+You could create a contract sub-project in this way
+
+```ruby
+contract = Secuconnect::Payment::Contract.new.create(account_id: account_id, body: body)
+
+# body could look like this
+body = {
+    contact: {
+        salutation: "Mr",
+        forename: "John",
+        surname: "Doe",
+        dob: "1980-02-03",
+        email: "john.doe@example.com",
+        mobile: "",
+        address: {
+        street: "Test Street",
+        street_number: "6",
+        postal_code: "01234",
+        city: "Examplecity",
+        country: "Germany"
+        }
+    },
+    project: "project_name",
+    payout_account: {
+        iban: "DE89370400440532013000",
+        bic: "",
+        owner: "Test 1"
+    }
+}
+```
+
+for further information which arguments are provided. Please check it on https://developer.secuconnect.com/
+
+if you want to validate the contract use
+
+```ruby
+validation_result = Secuconnect::Payment::Contract.new.validate(account_id: account_id)
+```
 
 ## Step 1
 
