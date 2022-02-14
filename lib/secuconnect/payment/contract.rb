@@ -33,7 +33,7 @@ module Secuconnect
           response.success?
         end
 
-        private
+      private
 
         def handle_response(action, response)
           raise ResponseError.new(response), "#{action.capitalize} response error" unless response.success?
