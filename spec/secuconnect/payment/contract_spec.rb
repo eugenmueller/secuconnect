@@ -3,7 +3,7 @@
 # rubocop:disable Metrics/BlockLength
 RSpec.describe Secuconnect::Payment::Contract, vcr: true do
   describe "contract index" do
-    subject(:response) { described_class.new.index }
+    subject(:response) { described_class.index }
 
     it "return index data" do
       expect(response).to have_key "data"
@@ -14,7 +14,7 @@ RSpec.describe Secuconnect::Payment::Contract, vcr: true do
   describe "contract show" do
     let(:account_id) { "GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX" }
 
-    subject(:response) { described_class.new.show(account_id: account_id) }
+    subject(:response) { described_class.show(account_id: account_id) }
 
     it "return contract for id" do
       expect(response).to have_key "object"
@@ -24,7 +24,7 @@ RSpec.describe Secuconnect::Payment::Contract, vcr: true do
   describe "contract validate" do
     let(:account_id) { "GCR_W27MYFEB7VYQ4AYXUSFZD278H8AWOX" }
 
-    subject(:response) { described_class.new.validate(account_id: account_id) }
+    subject(:response) { described_class.validate(account_id: account_id) }
 
     it "return true for valid id" do
       expect(response).to be true
@@ -59,7 +59,7 @@ RSpec.describe Secuconnect::Payment::Contract, vcr: true do
       }
     end
 
-    subject(:response) { described_class.new.create(account_id: account_id, body: body) }
+    subject(:response) { described_class.create(account_id: account_id, body: body) }
 
     it "create a new contract" do
       expect(response).to have_key "object"

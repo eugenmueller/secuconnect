@@ -12,20 +12,22 @@ module Secuconnect
     end
 
     class Client
-      include Secuconnect::Connection
-      include Secuconnect::Authenticated
+      class << self
+        include Secuconnect::Connection
+        include Secuconnect::Authenticated
 
-      private
+        private
 
-      def headers
-        {
-          "Content-Type": "application/json",
-          Authorization: "Bearer #{access_token}"
-        }
-      end
+        def headers
+          {
+            "Content-Type": "application/json",
+            Authorization: "Bearer #{access_token}"
+          }
+        end
 
-      def access_token
-        Secuconnect::Oauth2::Token.find_or_create
+        def access_token
+          Secuconnect::Oauth2::Token.find_or_create
+        end
       end
     end
   end
